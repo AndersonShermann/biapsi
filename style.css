@@ -1,0 +1,284 @@
+/* Estilos Globais */
+:root {
+    --cor-fundo: #fdfaf5; /* Creme claro - inspirado no cartão */
+    --cor-texto: #5a4b41; /* Marrom escuro */
+    --cor-destaque: #a49689; /* Bege/Marrom claro */
+    --cor-detalhe: #7e8761; /* Verde Oliva - inspirado no cartão */
+    --fonte-titulo: 'Playfair Display', serif; /* Elegante para o nome */
+    --fonte-corpo: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    margin: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-img,
+.contato-img {
+    width: min(320px, 40vw);
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-img img,
+.contato-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-img img {
+    object-position: center 40%;
+}
+
+.contato-img img {
+    object-position: center center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--cor-detalhe);
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #6a7151;
+}
+
+/* Cabeçalho (Header) */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-left: 30px;
+}
+
+nav a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--cor-detalhe);
+}
+
+/* Seção Hero */
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* Seção Sobre Mim */
+.sobre {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-img {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.sobre-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sobre-texto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto h3 {
+    font-size: 18px;
+    color: var(--cor-detalhe);
+    margin-bottom: 15px;
+}
+
+/* Seção Serviços */
+.servicos {
+    padding: 80px 0;
+}
+
+.servicos h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.servico-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.servico-item h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.servico-item p {
+    font-size: 15px;
+}
+
+.servico-item.online {
+    border: 2px solid var(--cor-detalhe);
+}
+
+.servico-item.online h3 {
+    color: var(--cor-detalhe);
+}
+
+/* Seção Contato */
+.contato {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contato-item img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: var(--cor-texto);
+    color: rgba(255,255,255,0.8);
+    padding: 40px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo h1 { font-size: 24px; }
+    nav ul { display: none; } /* Menu hamburguer pode ser adicionado depois */
+    .hero h2 { font-size: 32px; }
+    .sobre-grid { grid-template-columns: 1fr; text-align: center; }
+    .contato-links { flex-direction: column; gap: 20px; align-items: center; }
+}
